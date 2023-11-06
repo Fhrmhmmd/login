@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- TAILWINDCSS LINK -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="dark:bg-gradient-to-r from-sky-400 to-pink-700 dark:text-black">
+
+    <!-- TOGGLE SWITCH -->
+    <div class="flex justify-start p-4">
+        <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" value="" class="sr-only peer" id="toggle">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300
+                 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full
+                 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white
+                 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black"></div>
+            <span class="ml-3 text-sm font-medium text-gray-900 dark:text-white">Gradient Mode</span>
+        </label>
+    </div>
+
+    <!-- LOGIN CARD AND FORM -->
+    <div class="max-w-lg mx-auto border border-slate-400  rounded-xl p-5 mt-28 shadow dark:bg-white dark:border-red-600 ">
+        <h5 class="text-3xl text-center font-bold">LOGIN</h5>
+    <div>
+
+    <!--FORM LOGIN  -->
+        <form action="" class="mt-5">
+             <label for="">
+                <span class="font-bold p-1">Email</span>
+                    <input type="email" placeholder="Enter Email" id="email" class="px-3 p-2 block rounded w-full shadow-lg 
+                    border border-slate-400 focus:outline-none focus:ring-1  invalid:text-red-500 
+                    invalid:focus:ring-red-600 invalid:focus:border-red-600 peer hover:scale-105 transition">
+                <p class="text-red-500 invisible peer-invalid:visible mb-4">Format salah</p>
+             </label>
+             <label for="" class="mt-6">
+                <span class="font-bold p-1">Password</span>
+                    <input type="password" placeholder="Enter Password" id="Password" class="px-3 p-2 mb-5 block rounded w-full shadow-lg 
+                    border border-slate-400 focus:outline-none invalid:text-red-500 focus:ring-1
+                    invalid:focus:ring-red-600 invalid:focus:border-red-600 peer hover:scale-105 transition">
+             </label>
+            <button class="bg-sky-400 rounded-lg p-1 font-bold w-full mt-5 hover:bg-sky-600 hover:text-white hover:ring hover:ring-slate-400 hover:scale-105 transition">Submit</button>
+        </form>
+
+    <!-- OTHER LINK -->
+    <div class="mt-4 ">
+        <a href="" class="underline block text-center p-1">Forget Password?</a>
+        <a href="" class="underline block text-center">Don't have account?</a>
+    </div>
+
+    </div>
+        <p class="hover:scale-125 text-stone-400 text-center mt-16 transition">@Fakhri, 19 Oktober 2023</p>
+    </div>
+    
+    <div class="w-20 h-20 bg-red-600 rounded-full shadow-2xl ml-8 mt-44 animate-bounce duration-1000">
+        <div class="w-20 h-20 bg-white rounded- shadow-2xl scale-50 animate-pulse">
+        </div>
+     </div>
+    <div class="w-28 bg-slate-400 border shadow-4xl ml-5" ></div>
+        <p class="invisible">Halo</p>
+
+<!-- JS SWITCH DARKMODE -->
+<script>
+    const checkbox = document.querySelector('#toggle');
+    const html = document.querySelector('html');
+
+    checkbox.addEventListener('click', function (){
+        checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+    });
+</script>
+
+</body>
+</html>
